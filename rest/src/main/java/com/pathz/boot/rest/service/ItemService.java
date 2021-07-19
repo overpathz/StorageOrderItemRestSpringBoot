@@ -23,7 +23,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item getItem(Integer id) {
+    public Item getItem(Long id) {
         Optional<Item> optionalOrder = itemRepository.findById(id);
         String errorMessage = String.format("%s%d%s", "Item with id", id, " not found");
         return itemRepository.findById(id).orElseThrow(() -> new ItemNotFoundException(errorMessage));

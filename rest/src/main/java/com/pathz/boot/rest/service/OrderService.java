@@ -23,7 +23,7 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
-    public Order getOrder(Integer id) {
+    public Order getOrder(Long id) {
         Optional<Order> optionalOrder = orderRepository.findById(id);
         String errorMessage = String.format("%s%d%s", "Order with id", id, " not found");
         return orderRepository.findById(id).orElseThrow(() -> new OrderNotFoundException(errorMessage));
