@@ -3,20 +3,26 @@ package com.pathz.boot.rest.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
+@Setter
 @ToString
-public class Items {
+@Entity
+@Table(name = "items")
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer integer;
+    private Integer integer;
 
     @Column(name = "name")
-    String name;
+    private String name;
+
+    @Column(name = "quantity")
+    private Integer quantity;
+
 }
