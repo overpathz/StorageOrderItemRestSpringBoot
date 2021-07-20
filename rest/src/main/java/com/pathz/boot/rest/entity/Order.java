@@ -3,8 +3,6 @@ package com.pathz.boot.rest.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
@@ -26,6 +24,9 @@ public class Order {
 
     @Column(name = "quantity")
     private Integer quantity;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
     @OneToOne
     @JoinColumn(name = "item_id")
