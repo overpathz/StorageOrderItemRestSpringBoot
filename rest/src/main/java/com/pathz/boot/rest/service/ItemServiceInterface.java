@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ItemServiceInterface {
     Item save(Item item);
-    Item findById(Long id);
+    Item findById(Integer id);
     List<Item> getCheapestItems(String name, Integer quantity);
 }

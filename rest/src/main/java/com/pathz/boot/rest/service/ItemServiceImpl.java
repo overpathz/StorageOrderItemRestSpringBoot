@@ -21,7 +21,7 @@ public class ItemServiceImpl implements ItemServiceInterface{
     }
 
     @Override
-    public Item findById(Long id) {
+    public Item findById(Integer id) {
         String errorMessage = String.format("%s%d%s", "Item with id", id, " not found");
         return itemRepository.findById(id).orElseThrow(() -> new ItemNotFoundException(errorMessage));
     }

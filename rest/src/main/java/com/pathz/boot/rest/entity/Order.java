@@ -17,10 +17,10 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "price")
-    private Double price;
+    private Integer price;
 
     @Column(name = "quantity")
     private Integer quantity;

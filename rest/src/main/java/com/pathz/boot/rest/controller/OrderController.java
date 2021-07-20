@@ -17,5 +17,5 @@ public class OrderController {
     public Order addOrder(@RequestBody Order order) {
         return orderServiceInterface.save(order);
     }
-    
+
 }
