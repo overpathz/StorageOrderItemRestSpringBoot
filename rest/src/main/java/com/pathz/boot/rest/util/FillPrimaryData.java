@@ -17,6 +17,11 @@ public class FillPrimaryData {
 
     @PostConstruct
     public void execute() {
+        /*
+            If in database will be orders, this method throws exception
+            because it's not allowed to delete entity which contains referenced
+            primary key by foreign key from another table
+        */
         itemServiceInterface.deleteAll();
 
         Item laptop = new Item();

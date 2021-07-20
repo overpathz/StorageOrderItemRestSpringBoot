@@ -2,7 +2,6 @@ package com.pathz.boot.rest.controller;
 
 import com.pathz.boot.rest.dto.ItemRequestDTO;
 import com.pathz.boot.rest.dto.ItemResponseDTO;
-import com.pathz.boot.rest.dto.OrderResponseDTO;
 import com.pathz.boot.rest.entity.Item;
 import com.pathz.boot.rest.service.ItemServiceInterface;
 import com.pathz.boot.rest.util.ItemMapperDTO;
