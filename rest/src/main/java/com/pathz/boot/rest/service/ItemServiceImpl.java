@@ -2,18 +2,26 @@ package com.pathz.boot.rest.service;
 
 import com.pathz.boot.rest.entity.Item;
 import com.pathz.boot.rest.exception.ItemNotFoundException;
+import com.pathz.boot.rest.logging.ItemLogger;
 import com.pathz.boot.rest.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Service
 public class ItemServiceImpl implements ItemServiceInterface {
 
     @Autowired
     ItemRepository itemRepository;
+
+    @Autowired
+    ItemLogger itemLogger;
+
+    private final Logger logger = Logger.getLogger("ItemServiceLogger");
 
     @Override
     public Item save(Item item) {
@@ -34,12 +42,9 @@ public class ItemServiceImpl implements ItemServiceInterface {
         Item foundedCheapestItem = items.get(0);
         Integer cheapestItemQuantity = foundedCheapestItem.getQuantity();
 
-        System.out.println(foundedCheapestItem);
-        System.out.println(cheapestItemQuantity);
-
         if (quantity > cheapestItemQuantity) {
-            System.out.println("Request quantity is bigger than item quantity");
-            return items;
+            logger.log(Level.INFO, itemLogger.getLoggerMessages().get("cheapestItemsGetFail"));
+            return itemRepository.findAll();
         } else {
             for (int i = 0; i < quantity; i++) {
                 returnedItems.add(new Item(foundedCheapestItem));
@@ -49,6 +54,7 @@ public class ItemServiceImpl implements ItemServiceInterface {
             }
         }
 
+        logger.log(Level.INFO, itemLogger.getLoggerMessages().get("cheapestItemsGetSuccess"));
         return returnedItems;
     }
 

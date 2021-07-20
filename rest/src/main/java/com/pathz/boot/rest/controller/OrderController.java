@@ -35,12 +35,10 @@ public class OrderController {
         return orders;
     }
 
-    @PostMapping("")
+    @PostMapping("/create")
     public Order createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
         Order order = orderMapperDTO.mapDTOtoOrder(orderRequestDTO);
-        System.out.println(order);
         order.setCreatedAt(LocalDateTime.now());
-        System.out.println(order);
         return orderService.save(order);
     }
 

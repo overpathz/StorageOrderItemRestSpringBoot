@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderServiceInterface {
         LocalDateTime currentTime = LocalDateTime.now();
 
         orderRepository.deleteAll(
-                orderRepository.findByCreatedAtBefore(currentTime.minusMinutes(10))
+                orderRepository.findByCreatedAtBefore(currentTime.minusMinutes(1))
         );
     }
 }

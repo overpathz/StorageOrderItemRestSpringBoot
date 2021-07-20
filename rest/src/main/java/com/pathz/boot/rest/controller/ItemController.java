@@ -3,6 +3,7 @@ package com.pathz.boot.rest.controller;
 import com.pathz.boot.rest.dto.ItemRequestDTO;
 import com.pathz.boot.rest.dto.ItemResponseDTO;
 import com.pathz.boot.rest.dto.OrderResponseDTO;
+import com.pathz.boot.rest.entity.Item;
 import com.pathz.boot.rest.service.ItemServiceInterface;
 import com.pathz.boot.rest.util.ItemMapperDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ItemController {
     @Autowired
     private ItemMapperDTO itemMapperDTO;
 
-    @GetMapping
+    @GetMapping("/buy")
     public List<ItemResponseDTO> buyItem(@RequestParam String name,
                                          @RequestParam Integer quantity) {
 
@@ -34,8 +35,8 @@ public class ItemController {
         return items;
     }
 
-    @PostMapping
-    public void addItem(@RequestBody ItemRequestDTO itemRequestDto) {
-        itemService.save(itemMapperDTO.mapDTOtoItem(itemRequestDto));
+    @PostMapping("/add")
+    public Item addItem(@RequestBody ItemRequestDTO itemRequestDTO) {
+        return itemService.save(itemMapperDTO.mapDTOtoItem(itemRequestDTO));
     }
 }
