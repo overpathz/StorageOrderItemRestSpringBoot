@@ -5,7 +5,7 @@ Test task of Teamvoy for the position of Jun Java Dev<br>
 
 ## Features
 - ##### Logging system
-- ##### Written Postman collection for testing RESTful web app
+- ##### Written Postman collection for testing RESTful web app (below)
 - ##### DTO Pattern
 
 
@@ -16,6 +16,7 @@ Test task of Teamvoy for the position of Jun Java Dev<br>
 - ##### Maven
 - ##### Git
 - ##### MySQL
+- ##### JUnit
 
 
 ### Set Up
@@ -43,3 +44,7 @@ API URL: localhost:yourport (port can be changed in application.properties file)
 ### Database
 
 ![image](https://i.ibb.co/R7Tbjg0/Screenshot-19.png)
+
+
+### Written Postman collection
+![image](https://i.ibb.co/Fq0tGsz/Screenshot-21.png)
