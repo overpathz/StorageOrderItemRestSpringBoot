@@ -22,16 +22,7 @@ public class OrderController {
     @Autowired
     OrderMapperDTO orderMapperDTO;
 
-    @PostMapping
-    public Order createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
-        Order order = orderMapperDTO.mapDTOtoOrder(orderRequestDTO);
-        System.out.println(order);
-        order.setCreatedAt(LocalDateTime.now());
-        System.out.println(order);
-        return orderService.save(order);
-    }
-
-    @GetMapping
+    @GetMapping("")
     public List<OrderResponseDTO> getAll() {
         orderService.deleteTimeOutOrder();
 
@@ -42,6 +33,15 @@ public class OrderController {
                 .collect(Collectors.toList());
 
         return orders;
+    }
+
+    @PostMapping("")
+    public Order createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
+        Order order = orderMapperDTO.mapDTOtoOrder(orderRequestDTO);
+        System.out.println(order);
+        order.setCreatedAt(LocalDateTime.now());
+        System.out.println(order);
+        return orderService.save(order);
     }
 
 }
