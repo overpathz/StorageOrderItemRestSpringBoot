@@ -3,7 +3,6 @@ package com.pathz.boot.rest.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,10 +16,13 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long integer;
+    private Long id;
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "price")
+    private Integer price;
 
     @Column(name = "quantity")
     private Integer quantity;
