@@ -1,5 +1,5 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Test_task_0"></a>Test task</h1>
-<p class="has-line-data" data-line-start="2" data-line-end="4">Test task of Teamvoy for the position of Jun Java Dev&lt;br&gt;<br>
+<p class="has-line-data" data-line-start="2" data-line-end="4">Test task of Teamvoy for the position of Jun Java Dev&lt;br&gt;
 [!] Not all tests are written because I had no experience before, but the test task made me understand and learn the basics in a few hours. &lt;br&gt;</p>
 <h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Features_5"></a>Features</h2>
 <ul>
