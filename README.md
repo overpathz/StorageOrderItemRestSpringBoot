@@ -40,4 +40,6 @@ API URL: localhost:yourport (port can be changed in application.properties file)
 | GET (with parameters)     |     items/buy      |      receiving items you have bought      |
 | POST      |     items/buy     |     creating new item (fill method body)        |
 
-[!image](https://i.ibb.co/R7Tbjg0/Screenshot-19.png)
+### Database
+
+![image](https://i.ibb.co/R7Tbjg0/Screenshot-19.png)
