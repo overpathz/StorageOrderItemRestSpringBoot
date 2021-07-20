@@ -8,4 +8,5 @@ public interface ItemServiceInterface {
     Item save(Item item);
     Item findById(Integer id);
     List<Item> getCheapestItems(String name, Integer quantity);
+    void deleteAll();
 }

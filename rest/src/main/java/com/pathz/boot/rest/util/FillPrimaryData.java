@@ -17,6 +17,8 @@ public class FillPrimaryData {
 
     @PostConstruct
     public void execute() {
+        itemServiceInterface.deleteAll();
+
         Item laptop = new Item();
         laptop.setName("Asus");
         laptop.setPrice(12500);

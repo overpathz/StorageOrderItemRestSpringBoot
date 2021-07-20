@@ -31,12 +31,29 @@ public class ItemServiceImpl implements ItemServiceInterface {
         List<Item> items = itemRepository.findAllByNameOrderByPriceAsc(name);
         List<Item> returnedItems = new ArrayList<>();
 
-        for (int i = 0; i < quantity; i++) {
-            if (!items.isEmpty()) {
-                returnedItems.add(items.get(i));
+        Item foundedCheapestItem = items.get(0);
+        Integer cheapestItemQuantity = foundedCheapestItem.getQuantity();
+
+        System.out.println(foundedCheapestItem);
+        System.out.println(cheapestItemQuantity);
+
+        if (quantity > cheapestItemQuantity) {
+            System.out.println("Request quantity is bigger than item quantity");
+            return items;
+        } else {
+            for (int i = 0; i < quantity; i++) {
+                returnedItems.add(new Item(foundedCheapestItem));
+                Item item = new Item(foundedCheapestItem);
+                item.setQuantity(--cheapestItemQuantity);
+                itemRepository.save(item);
             }
         }
 
         return returnedItems;
+    }
+
+    @Override
+    public void deleteAll() {
+        itemRepository.deleteAll();
     }
 }

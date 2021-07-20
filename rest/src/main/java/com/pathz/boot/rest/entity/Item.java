@@ -27,4 +27,11 @@ public class Item {
     @Column(name = "quantity")
     private Integer quantity;
 
+    public Item(Item item) {
+        this.id = item.getId();
+        this.name = item.getName();
+        this.price = item.getPrice();
+        this.quantity = item.getQuantity();
+    }
+
 }

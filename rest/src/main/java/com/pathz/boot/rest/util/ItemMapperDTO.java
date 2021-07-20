@@ -13,12 +13,12 @@ public class ItemMapperDTO {
 
         item.setName(itemRequestDTO.getName());
         item.setPrice(itemRequestDTO.getPrice());
-        item.setQuantity(item.getQuantity());
+        item.setQuantity(itemRequestDTO.getQuantity());
 
         return item;
     }
 
-    public ItemResponseDTO itemResponseDTO(Item item) {
+    public ItemResponseDTO mapItemToDTO(Item item) {
         ItemResponseDTO itemResponseDTO = new ItemResponseDTO();
 
         itemResponseDTO.setId(item.getId());
