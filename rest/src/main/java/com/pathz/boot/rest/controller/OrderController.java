@@ -1,7 +1,8 @@
 package com.pathz.boot.rest.controller;
 
 import com.pathz.boot.rest.entity.Order;
-import com.pathz.boot.rest.service_impl.OrderService;
+import com.pathz.boot.rest.service.OrderServiceImpl;
+import com.pathz.boot.rest.service.OrderServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
     @Autowired
-    private OrderService orderService;
+    private OrderServiceInterface orderServiceInterface;
 
     @PostMapping("")
     public Order addOrder(@RequestBody Order order) {
-        return orderService.addOrder(order);
+        return orderServiceInterface.save(order);
     }
-
-
-
+    
 }
