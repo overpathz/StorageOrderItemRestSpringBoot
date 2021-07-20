@@ -16,6 +16,7 @@ Test task of Teamvoy for the position of Jun Java Dev<br>
 - ##### Maven
 - ##### Git
 - ##### MySQL
+- ##### JUnit
 
 
 ### Set Up
