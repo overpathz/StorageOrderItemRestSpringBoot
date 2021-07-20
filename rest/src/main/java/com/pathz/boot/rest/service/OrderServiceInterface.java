@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface OrderServiceInterface {
     Order save(Order item);
-    List<Order> findAll(Order id);
+    List<Order> findAll();
     void deleteTimeOutOrder();
 }

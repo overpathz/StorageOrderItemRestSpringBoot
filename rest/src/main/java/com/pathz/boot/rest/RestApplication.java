@@ -11,7 +11,7 @@ public class RestApplication {
 		SpringApplication.run(RestApplication.class, args);
 
 		// calling method from utility class for initializing primary data
-		FillPrimaryData.execute();
+//		new FillPrimaryData().execute();
 	}
 
 }

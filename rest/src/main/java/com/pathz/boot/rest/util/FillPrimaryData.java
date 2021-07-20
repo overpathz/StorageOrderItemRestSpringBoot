@@ -5,6 +5,7 @@ import com.pathz.boot.rest.service.ItemServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +13,10 @@ import java.util.List;
 public class FillPrimaryData {
 
     @Autowired
-    private static ItemServiceInterface itemServiceInterface;
+    private ItemServiceInterface itemServiceInterface;
 
-    public static void execute() {
+    @PostConstruct
+    public void execute() {
         Item laptop = new Item();
         laptop.setName("Asus");
         laptop.setPrice(12500);

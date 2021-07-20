@@ -16,7 +16,7 @@ public class OrderMapperDTO {
     public Order mapDTOtoOrder(OrderRequestDTO orderRequestDTO) {
         Order order = new Order();
 
-        order.setItem(itemService.findById(orderRequestDTO.getItem()));
+        order.setItem(itemService.findById(orderRequestDTO.getItemId()));
         order.setPrice(orderRequestDTO.getPrice());
         order.setQuantity(orderRequestDTO.getQuantity());
 

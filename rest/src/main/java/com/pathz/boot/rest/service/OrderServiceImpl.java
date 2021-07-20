@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderServiceInterface {
     }
 
     @Override
-    public List<Order> findAll(Order id) {
+    public List<Order> findAll() {
         return orderRepository.findAll();
     }
 

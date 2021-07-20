@@ -28,8 +28,9 @@ public class Order {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    @OneToOne
-    @JoinColumn(name = "item_id")
+//    @OneToOne
+//    @JoinColumn(name = "item_id")
+    @ManyToOne
     private Item item;
 
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ItemServiceImpl implements ItemServiceInterface{
+public class ItemServiceImpl implements ItemServiceInterface {
 
     @Autowired
     ItemRepository itemRepository;
