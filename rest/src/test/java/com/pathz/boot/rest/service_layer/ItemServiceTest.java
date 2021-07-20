@@ -3,14 +3,12 @@ package com.pathz.boot.rest.service_layer;
 import com.pathz.boot.rest.entity.Item;
 import com.pathz.boot.rest.repository.ItemRepository;
 import com.pathz.boot.rest.service.ItemServiceImpl;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
