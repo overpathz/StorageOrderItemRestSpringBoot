@@ -1,7 +1,7 @@
 package com.pathz.boot.rest.controller;
 
 import com.pathz.boot.rest.entity.Order;
-import com.pathz.boot.rest.service.OrderService;
+import com.pathz.boot.rest.service_impl.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

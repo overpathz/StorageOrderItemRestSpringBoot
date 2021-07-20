@@ -1,4 +1,4 @@
-package com.pathz.boot.rest.service;
+package com.pathz.boot.rest.service_impl;
 
 import com.pathz.boot.rest.entity.Order;
 import com.pathz.boot.rest.exception.OrderNotFoundException;
