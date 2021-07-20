@@ -11,7 +11,7 @@ Test task of Teamvoy for the position of Jun Java Dev<br>
 - ##### Written Postman collection for testing RESTful web app
 - ##### DTO Pattern
 
-<br>
+
 ---
 
 ## Technologies
@@ -21,6 +21,8 @@ Test task of Teamvoy for the position of Jun Java Dev<br>
 - ##### Maven
 - ##### Git
 - ##### MySQL
+
+---
 
 ### Set Up
 
