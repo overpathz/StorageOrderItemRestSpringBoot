@@ -39,7 +39,7 @@ API URL: localhost:yourport (port can be changed in application.properties file)
 | POST     |     orders/create      |     creating order (fill method body)       |
 | GET      |     items      |      receiving all orders        |
 | GET (with parameters)     |     items/buy      |      receiving items you have bought      |
-| POST      |     items/buy     |     creating new item (fill method body)        |
+| POST      |     items/add     |     creating new item (fill method body)        |
 
 ### Database
 
