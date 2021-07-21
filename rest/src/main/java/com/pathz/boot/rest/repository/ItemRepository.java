@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {
-    List<Item> findByName(String name);
     List<Item> findAllByNameOrderByPriceAsc(String name);
 }
