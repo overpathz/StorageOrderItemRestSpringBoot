@@ -1,6 +1,13 @@
-# Test task
+# Spring Boot REST application
 
-Test task for the position of Jun Java Dev<br><br>
+Description:<br>
+In this application we can add items to storage, buy them, create orders.<br><br>
+
+Details:<br>
+In the application we can create orders in storage<br>
+The order is valid for 10 minutes<br>
+Also, we can add items to storage, buy items (the number of items will be reduced in storage).<br><br>
+
 [!] Not all tests are written because I had no experience before, but the test task made me understand and learn the basics in a few time. <br>
 
 ## Features
