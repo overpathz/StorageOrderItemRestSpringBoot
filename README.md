@@ -1,9 +1,9 @@
 # Spring Boot REST application
 
-Description:<br>
+## Description:<br>
 Application for manipulationg items and orders in the storage (database).<br><br>
 
-Details:<br>
+## Details:<br>
 In the application we can create orders in storage.<br>
 The order is valid for 10 minutes.<br>
 Also, we can add items to storage, buy items (the number of items will be reduced in storage).<br><br>
